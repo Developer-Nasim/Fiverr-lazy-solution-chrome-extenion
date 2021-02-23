@@ -1,0 +1,19 @@
+{
+    "name":"Fiverr helpers",
+    "description": "This is the best browser extension for the all users of fiverr,, if you are suffaring problem for fiverr message notification  then it will be the great choise for your",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "icons": {"128":"assets/img/icon128.png"},
+    "browser_action": {
+        "default_icon": "assets/img/icon90.png",
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["assets/js/fiverr.js"],
+            "css": ["assets/css/fiverr.css"]
+        }
+    ],
+    "permissions": ["tabs"]
+}
