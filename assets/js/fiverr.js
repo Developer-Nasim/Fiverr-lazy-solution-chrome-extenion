@@ -13,7 +13,6 @@
         let fibody   = document.querySelector('.mp-box');
         let unread   = document.querySelector('.unread');
         if (unread) {
-
             fiFavico1.forEach(fv => {
                 fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
             })
@@ -21,15 +20,21 @@
             fiFavico3.forEach(fv => {
                 fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
             })
-            fHeader.style.background = "red";
-            fibody.style.background = "red";
-            fiMain.style.background = "red";
+
+            if (fHeader && fibody && fiMain) {
+                fHeader.style.background = "red";
+                fibody.style.background = "red";
+                fiMain.style.background = "red";
+                
+            }
             audio.play();
         }else{
-            fHeader.style.background = "#fff";
-            fibody.style.background = "#f7f7f7";
-            fiMain.style.background = "#f7f7f7";
 
+            if (fHeader && fibody && fiMain) { 
+                fHeader.style.background = "#fff";
+                fibody.style.background = "#f7f7f7";
+                fiMain.style.background = "#f7f7f7"; 
+            }
             fiFavico1.forEach(fv => {
                 fv.href = "https://assetsv2.fiverrcdn.com/assets/favicon-32x32-23d4a3fd56a87eaf5a93ddf35a220811.png";
             })
