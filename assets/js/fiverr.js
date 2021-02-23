@@ -12,15 +12,7 @@
         let fiMain   = document.querySelector('#main-wrapper');
         let fibody   = document.querySelector('.mp-box');
         let unread   = document.querySelector('.unread');
-        if (unread) {
-            fiFavico1.forEach(fv => {
-                fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
-            })
-            fiFavico2.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png"
-            fiFavico3.forEach(fv => {
-                fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
-            })
-
+        if (unread) { 
             if (fHeader && fibody && fiMain) {
                 fHeader.style.background = "red";
                 fibody.style.background = "red";
@@ -28,6 +20,15 @@
                 
             }
             audio.play();
+            if (fiFavico1 && fiFavico2 && fiFavico3) { 
+                fiFavico1.forEach(fv => {
+                    fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
+                })
+                fiFavico2.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png"
+                fiFavico3.forEach(fv => {
+                    fv.href = "https://i.ibb.co/3Cq3DBM/fiverr-notif.png";
+                })
+            }
         }else{
 
             if (fHeader && fibody && fiMain) { 
@@ -35,26 +36,29 @@
                 fibody.style.background = "#f7f7f7";
                 fiMain.style.background = "#f7f7f7"; 
             }
-            fiFavico1.forEach(fv => {
-                fv.href = "https://assetsv2.fiverrcdn.com/assets/favicon-32x32-23d4a3fd56a87eaf5a93ddf35a220811.png";
-            })
-            fiFavico2.href = "https://assetsv2.fiverrcdn.com/assets/favicon-32x32-23d4a3fd56a87eaf5a93ddf35a220811.png";
-            fiFavico3.forEach(fv => {
-                fv.href = "https://assetsv2.fiverrcdn.com/assets/v2_globals/apple-touch-icon-60x60-53e90301118fc50953b15292ed68d529.png";
-            })
+            if (fiFavico1 && fiFavico2 && fiFavico3) { 
+                fiFavico1.forEach(fv => {
+                    fv.href = "https://assetsv2.fiverrcdn.com/assets/favicon-32x32-23d4a3fd56a87eaf5a93ddf35a220811.png";
+                })
+                fiFavico2.href = "https://assetsv2.fiverrcdn.com/assets/favicon-32x32-23d4a3fd56a87eaf5a93ddf35a220811.png";
+                fiFavico3.forEach(fv => {
+                    fv.href = "https://assetsv2.fiverrcdn.com/assets/v2_globals/apple-touch-icon-60x60-53e90301118fc50953b15292ed68d529.png";
+                })
+            }
  
 
         }
  
     }, 1);
- 
+
+
     setInterval(() => {
         let unreaded   = document.querySelector('.unread');
         if (unreaded) { 
             function Notif(){
-                const notif = new Notification('New Message from nasim', {
-                    body: "hey mate, hpowasasa asa sasas",
-                    'icon': 'https://lh3.googleusercontent.com/ogw/ADGmqu_NrqfLvDRhMsnq2Hi_9iK1bCEcTnir0XPQFbFJ=s32-c-mo'
+                const notif = new Notification('A new message/notification from Fiverr', {
+                    body: "Hey you have new message/notification from fiverr,, please click to check your profile to set that",
+                    'icon': 'https://i.ibb.co/hF9y4tP/icon90.png'
                 });
                 notif.onclick = (e) => {
                     window.location.href = 'https://lh3.googleusercontent.com/';
